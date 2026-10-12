@@ -17,6 +17,8 @@ Every flow between an external entity and the system in the Context Diagram ente
 | → User | Availability Information, Booking Reminder, Booking Notification, Availability Notification | P4 Availability and Notifications |
 | Administrator → | User Management Request, Space Management Information, Availability Management Information, Reservation Management Request, Room Status Request, Report Request | P5 Administration |
 | → Administrator | User Information, Space Information, Availability Information, Reservation Information, Room Status, Booking Reports, Usage Reports, Management Confirmation | P5 Administration |
+| Third-Party Space Provider → | External Search Request | P2 Space Search and Selection |
+| → Third-Party Space Provider | External Space Information, External Availability Information | P2 Space Search and Selection |
 
 No new external inputs or outputs appear at Level 0 that are missing from the Context Diagram, and none of the Context Diagram flows are dropped.
 
@@ -25,11 +27,11 @@ No new external inputs or outputs appear at Level 0 that are missing from the Co
 | Check | Status |
 |---|---|
 | The Context Diagram represents the whole system as one process | ✅ |
-| External entities (User, Administrator) match the Use Case actors from Lab 3 | ✅ |
+| External entities match the Use Case actors from Lab 3 | ⚠️ User and Administrator match; Third-Party Space Provider is not an actor in the Lab 3 Use Case Diagram |
 | The Level-0 DFD uses the same external entities | ✅ |
 | The Context Diagram and Level-0 DFD are balanced (table above) | ✅ |
 | Level-0 contains at least five meaningful processes (P1–P5) | ✅ |
-| Level-0 contains at least two relevant data stores | ✅ |
+| Level-0 contains at least two relevant data stores (D1 User Data, D2 Space Data, D3 Booking Data, D4 Notification Data) | ✅ |
 | The Core Processes Matrix contains the same processes as the Level-0 DFD | ✅ |
 | The DFD processes are consistent with the Functional Requirements and Use Cases | ✅ (see mapping below) |
 
