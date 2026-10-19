@@ -10,7 +10,8 @@ To address this gap, the **Study Room and Co-Working Space Booking System** prop
 
 - **Students:** who need quiet study rooms for individual or group study.
 - **Freelancers and remote workers:** who need suitable spaces for working or attending meetings.
-- **Space administrators:** who manage the available rooms, spaces, schedules, and bookings.
+- **Platform administrators:** who manage users, listings, availability, reservations, and reports.
+- **Third-party space providers:** external organizations supplying space details and availability through an API; they are distinct from platform administrators.
 
 ## 3. In-Scope Features
 
@@ -24,6 +25,11 @@ To address this gap, the **Study Room and Co-Working Space Booking System** prop
 - Search by location, date, time, duration, and capacity
 - Filter spaces based on facilities such as Wi-Fi, power outlets, whiteboards, and projectors
 - View space details, facilities, and location
+
+### Third-Party Space Provider Integration
+- Retrieve and validate external space details, facilities, and availability through an API
+- Handle unavailable or outdated external data without treating it as confirmed availability
+- Recheck availability before confirming a booking
 
 ### Booking Management
 - Make a booking
