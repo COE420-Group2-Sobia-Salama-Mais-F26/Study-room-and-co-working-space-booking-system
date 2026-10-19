@@ -35,3 +35,9 @@
 **FR-14:** The system shall allow administrators to manage reservations by viewing, updating, or cancelling bookings when necessary.
 
 **FR-15:** The system shall allow administrators to generate reports showing booking and space usage information.
+
+## External Provider Integration (cross-lab alignment)
+
+**FR-16:** The system shall send relevant search criteria to a third-party space provider's external API and retrieve matching space information.
+
+**FR-17:** The system shall retrieve and validate external space details and availability and recheck availability before confirming a booking.
