@@ -11,7 +11,7 @@ Editable diagram (Creately): https://app.creately.com/d/lNShtZgzeFY/edit
 | No. | Process | Derived from |
 |---|---|---|
 | P1 | User Management | FR-10, FR-11, FR-13 |
-| P2 | Space Search and Selection | FR-01, FR-02, FR-03 |
+| P2 | Space Search and Selection | FR-01, FR-02, FR-03, FR-16, FR-17 |
 | P3 | Booking Management | FR-04, FR-05, FR-06, FR-12, FR-13 |
 | P4 | Availability and Notifications | FR-05, FR-07, FR-08 |
 | P5 | Administration | FR-09, FR-14, FR-15 |
@@ -60,6 +60,6 @@ D3 appears more than once in the diagram to keep the lines readable; it is the s
 
 | From | To | Data flow |
 |---|---|---|
-| Third-Party Space Provider | P2 | External Search Request |
-| P2 | Third-Party Space Provider | External Space Information |
-| P2 | Third-Party Space Provider | External Availability Information |
+| P2 | Third-Party Space Provider | External Search Request |
+| Third-Party Space Provider | P2 | External Space Information |
+| Third-Party Space Provider | P2 | External Availability Information |
