@@ -35,3 +35,11 @@
 **NFR-14 – Privacy:** The system shall restrict access to users' personal information and booking history to the user and authorized administrators.
 
 **NFR-15 – Data Integrity:** The system shall ensure that two users cannot successfully book the same space for overlapping date and time periods.
+
+## External API Quality Requirements
+
+**NFR-16 – Resilience:** The system shall handle external API failures without claiming unverified space availability.
+
+**NFR-17 – Validation:** The system shall validate required fields and formats of external space and availability data.
+
+**NFR-18 – Performance:** Under normal conditions, the system shall process a successful external API response within 5 seconds.
