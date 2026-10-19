@@ -28,7 +28,7 @@
 
 **UC-11 – Register Account:** The user creates a new account by entering their name, email address, and password.
 
-**UC-12 – View Upcoming and Previous Bookings:** The student views their upcoming and previous bookings, including the space, date, time, and booking status.
+**UC-12 – View Upcoming and Previous Bookings:** The user views their upcoming and previous bookings, including the space, date, time, and booking status.
 
 **UC-13 – Manage Reservations:** The administrator views, updates, or cancels reservations when necessary.
 
@@ -52,3 +52,12 @@ The admin needs to see room details before updating them.
 
 **R-05:** Notify Space Availability → Search for Spaces — `<<extend>>`  
 The system optionally alerts users when a searched space becomes available.
+
+
+## External Provider Integration Use Cases
+
+**UC-16 – Retrieve External Space Information:** The platform sends search criteria to the third-party space provider's API and receives matching space listings and facilities.
+
+**UC-17 – Retrieve External Availability:** The platform retrieves and validates provider availability for the selected date and time and rechecks it before booking confirmation.
+
+The User and Platform Administrator are platform roles. The Third-Party Space Provider is an external organization whose External API is a software interface, not a platform administrator.
