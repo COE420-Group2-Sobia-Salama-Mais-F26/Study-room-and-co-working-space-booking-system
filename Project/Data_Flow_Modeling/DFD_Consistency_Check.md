@@ -12,6 +12,7 @@ Every flow between an external entity and the system in the Context Diagram also
 | User | Availability Requests, Availability Information, Notifications | P4 Availability and Notification Management |
 | Administrator | Management requests and reports | P5 Administration |
 | Third-Party Space Provider | External Search Request, External Space Information, External Availability Information | P2 Space Search and Selection |
+| Third-Party Space Provider | Space and Availability Updates | P4 Availability and Notification Management |
 
 ## Checklist
 
