@@ -1,65 +1,97 @@
-# Software Process Model
+# Exercise 1: Selection of a Software Process Model done by sobia adnan g00100257
 
-## 1. Selected Software Process Model
+**1. Selected Software Process Model**
 
 The **Incremental Model** has been selected as the most appropriate software process model for the proposed **Study Room and Co-Working Space Booking System**.
 
-## 2. Reason
+#### **Reason**
 
-The proposed system will include the following main feature categories:
+The proposed system contains several major feature categories that can be developed as separate increments:
 
-### 1. User Management
-- User registration and login
-- Booking history
+1.  **User Management**
 
-### 2. Space Search and Selection
-- Search for study rooms, private rooms, desks, and co-working spaces
-- Search by location, date, time, duration, and capacity
-- Filter spaces based on available facilities such as Wi-Fi, power outlets, whiteboards, and projectors
-- View space details, facilities, and location
+    - User registration and login
 
-### 3. Third-Party API Integration
-- Retrieve space listings and availability from external providers
-- Validate API responses and handle provider failures
+    - User profile
 
-### 4. Booking Management
-- Make a booking
-- Modify a booking
-- Cancel a booking
-- Group booking
-- View upcoming and previous bookings
-- Booking confirmation
+    - Booking history
 
-### 5. Availability and Notifications
-- View the real-time status of spaces
-- Update room availability when a user finishes early
-- Notify users when a previously occupied space becomes available
-- Send booking reminders and notifications
+2.  **Space Search and Selection**
 
-### 6. Administration
-- Manage users
-- Add, edit, and remove spaces
-- Manage space facilities and availability
-- Manage reservations
-- Monitor room status
-- Generate booking and usage reports
+    - Search for study rooms, meeting rooms, private rooms, desks, and co-working spaces
 
-The **Incremental Model** is appropriate because the features of the proposed system can be divided into separate increments and developed incrementally. For example, the first increment can focus on **User Management**, followed by **Space Search and Selection**, **Third-Party API Integration**, **Booking Management**, **Availability and Notifications**, and finally **Administration**.
+    - Search by location, date, time, duration, and capacity
 
-Each increment can be **designed, implemented, tested, and delivered** before the next increment is developed. The completed functionality remains part of the final system, while each new increment adds additional functionality. This allows the team to develop the system piece by piece while obtaining a working system at an earlier stage.
+    - Filter spaces based on facilities such as Wi-Fi, power outlets, whiteboards, and projectors
 
-## 3. Major Overheads/Drawbacks and How We Will Manage Them
+    - View space details and location
 
-### Integration
-New increments may cause problems when combined with existing features. The team will test each new increment with the previous features to make sure everything works together.
+3.  **Third-Party Space Integration/ Providers**
 
-### Planning
-Deciding which features should be developed in each increment can be difficult. The team will prioritize the main features and develop them in a logical order.
+    - Receive space information from external providers through external APIs
 
-### Testing
-Each increment needs to be tested, which increases the testing effort. The team will test each increment before moving to the next one.
+    - Receive available locations and space information
 
-### Management
-Managing multiple increments can require additional coordination between team members. The team will manage this by assigning clear responsibilities and maintaining a development schedule.
+    - Process external availability information
 
-Overall, these drawbacks can be managed through **proper planning, regular testing, and clear coordination among team members**.
+    - Provide relevant space information to the platform based on user location criteria
+
+4.  **Booking Management**
+
+    - Make a booking
+
+    - Modify a booking
+
+    - Cancel a booking
+
+    - Group booking
+
+    - View upcoming and previous bookings
+
+    - Booking confirmation
+
+    - Support external booking operations only if the DeskOS API permits them
+
+5.  **Real-Time Availability and Notifications**
+
+    - View the availability status of spaces
+
+    - Update availability when a space becomes free
+
+    - Notify users when a previously occupied space becomes available
+
+    - Send booking reminders and notifications
+
+6.  **Administration**
+
+    - Manage users and access.
+
+    - Monitor platform activity and reported issues.
+
+    - View authorized booking records.
+
+    - Generate platform usage reports.
+
+    - Manage platform settings and notification rules, if implemented.
+
+The Incremental Model is appropriate because these features can be divided into separate increments and developed progressively. For example, the first increment can focus on User Management, followed by Space Search, Third-Party API Integration, Booking Management, Availability and Notifications, and finally Administration.
+
+The DeskOS API integration will be developed as a separate increment after the basic space search functionality is established. The team will review the API documentation, verify access and supported functionality, and test integration before incorporating external space information into the platform
+
+Each increment can be designed, implemented, tested, and delivered before the next increment is developed. The completed functionality remains part of the final system while each new increment adds additional functionality. This allows the team to develop the platform piece by piece while obtaining a working system at an earlier stage.
+
+### **3. Major Overheads/Drawbacks and How We Will Manage Them**
+
+**Integration:  
+** The DeskOS API may provide information in a format that differs from the platform's internal data format. New increments may also cause integration problems with existing features. The team will test API integration with the existing system and ensure that external space information is correctly processed before displaying it to users.
+
+**Planning:  
+** Deciding which features should be developed in each increment can be difficult. The team will prioritize the core features and develop them in a logical order, starting with user management and search before implementing booking and external API integration.
+
+**Testing:  
+**Each increment needs to be tested, including the communication between the platform and DeskOS APIs. This increases the testing effort. The team will test each increment before moving to the next one and verify that external data is handled correctly. The team will test the DeskOS API integration, validate returned space information, and verify that API failures do not cause the platform to crash.
+
+**Management:  
+**Managing multiple increments and coordinating with external API requirements can require additional coordination between team members. The team will assign clear responsibilities, maintain a development schedule, and document the API requirements.
+
+Overall, these drawbacks can be managed through proper planning, regular testing, clear coordination, and careful integration of the third-party services.

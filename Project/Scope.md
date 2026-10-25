@@ -1,74 +1,165 @@
-# Project Scope
+# Exercise 2: Define the Project Scope done by Mais Abudaqqa g00099729
 
-## 1. Project Objective
+1.  **Project Objective**
 
-Existing UAE workspace booking systems are mainly provided by educational institutions or commercial co-working spaces. However, these systems are often limited to specific institutions or primarily focused on professional users, which may not address the needs of individuals seeking flexible spaces for studying, working, or collaborating.
+Existing UAE workspace booking systems are often limited to specific institutions or particular types of users. The proposed Study Room and Co-Working Space Booking System aims to provide a unified web-based platform where students, professionals, freelancers, remote workers, and other individuals can find and reserve suitable spaces for studying, working, meetings, or collaboration.
 
-To address this gap, the **Study Room and Co-Working Space Booking System** proposes a unified web-based platform accessible to students, professionals, and other individuals finding a suitable place to study, work, or collaborate. The system will allow users to search for and reserve study rooms, private rooms, desks, and co-working spaces based on factors such as location, date, time, capacity, duration, and available facilities. The system will also allow users to make, view, modify, and cancel bookings, while administrators can manage spaces, availability, users, and reservations.
+The system will allow users to search for spaces based on location, date, time, duration, capacity, and available facilities. Users will be able to make, view, modify, and cancel bookings.
 
-## 2. Target Users
+The platform will integrate with the DeskOS API to retrieve and display space information and availability when supported by the API and available access permissions. This will allow users to search for relevant external spaces through one platform. The platform will not independently create or maintain the source listings or availability of external spaces.
 
-- **Students:** who need quiet study rooms for individual or group study.
-- **Freelancers and remote workers:** who need suitable spaces for working or attending meetings.
-- **Platform administrators:** who manage users, listings, availability, reservations, and reports.
-- **Third-party space providers:** external organizations supplying space details and availability through an API; they are distinct from platform administrators.
+The platform will manage its own user accounts, access permissions, and the booking records and notifications it is authorized to handle. External booking, modification, and cancellation operations will be supported only if the DeskOS API provides the required functionality and access.
 
-## 3. In-Scope Features
+The website administrator will manage platform users, access permissions, platform activity, authorized booking records, reported issues, and usage reports. The administrator will not manage the physical facilities, source listings, or source availability of external providers.
 
-### User Management
+2.  **Target Users**
+
+- **Students:** Users who need quiet spaces for individual or group study.
+
+- **Freelancers and remote workers:** Users who need suitable workspaces, meeting spaces, or desks.
+
+- **Professionals and other individuals:** Users who need spaces for meetings, work, collaboration, or other activities.
+
+- **Platform administrators:** Personnel responsible for managing user accounts, access permissions, platform activity, authorized booking records, reported issues, platform settings, and usage reports.
+
+- **Third-party space providers:** External parties responsible for the space information and provider-side operations made available through the DeskOS platform and API. Their exact responsibilities and supported operations depend on the integration arrangement.
+
+3.  **In-Scope Features**
+
+#### **1. User Management**
+
 - User registration and login
+
 - User profile
+
 - View booking history
 
-### Space Search and Selection
-- Search for study rooms, private rooms, desks, and co-working spaces
+#### **2. Space Search and Selection**
+
+- Search for study rooms, meeting rooms, private rooms, desks, and co-working spaces
+
 - Search by location, date, time, duration, and capacity
+
 - Filter spaces based on facilities such as Wi-Fi, power outlets, whiteboards, and projectors
+
 - View space details, facilities, and location
 
-### Third-Party Space Provider Integration
-- Retrieve and validate external space details, facilities, and availability through an API
-- Handle unavailable or outdated external data without treating it as confirmed availability
-- Recheck availability before confirming a booking
+#### **3. Third-Party Space Integration**
 
-### Booking Management
-- Make a booking
-- Modify a booking
-- Cancel a booking
-- Make group bookings
-- View upcoming and previous bookings
-- Booking confirmation
+- Connect the platform backend to the DeskOS API, subject to access and authentication requirements.
 
-### Availability and Notifications
-- View the availability status of spaces
-- Update the availability of a space when it becomes free
-- Notify users when a previously occupied space becomes available
-- Send booking reminders and notifications
+- Send user search criteria to supported API endpoints.
 
-### Administration
-- Manage users
-- Add, edit, and remove spaces
-- Manage space facilities and availability
-- Manage reservations
-- Monitor room status
-- Generate booking and usage reports
+- Retrieve and process external space information returned by the API.
 
-## 4. Out-of-Scope Features
+- Retrieve and display availability information when supported by the API.
 
-- Online payment processing or integration with payment gateways
-- Real-time IoT integration, such as detecting whether a room is physically occupied using sensors
-- Smart access control, such as unlocking doors using QR codes, NFC, or biometric authentication
-- Food and beverage ordering from the co-working or study space
-- Advanced AI-based recommendations for selecting the best workspace
-- Integration with external calendar applications, such as Google Calendar or Microsoft Outlook
-- Multi-branch enterprise management across different countries or organizations
-- Video conferencing within the booking system
-- Native mobile applications for Android and iOS; the initial version will focus on a web-based system
+- Validate returned information before displaying it.
 
-## 5. Major Deliverables
+- Handle API errors, unavailable responses, and incomplete data.
 
-- **Requirements Specification:** documentation describing the system requirements and user needs.
-- **System Design:** including use case diagrams, class diagrams, database design, and system architecture.
-- **User Interface Prototype:** initial designs showing the main screens and user interactions.
-- **Testing Documentation:** test cases and results demonstrating that the system works correctly.
-- **Final Project Documentation:** report explaining the development process, system design, implementation, and evaluation.
+- Support external booking operations only if the API provides the required functionality and access.
+
+#### **4. Platform Booking and Booking Management**
+
+- Allow users to view booking records available to the platform.
+
+- Allow users to create, modify, or cancel bookings that the platform is authorized to manage.
+
+- Display booking confirmations and status information when available.
+
+- Check for overlapping bookings within the booking records the platform controls.
+
+- Support booking, modification, and cancellation of DeskOS-listed spaces only if the API explicitly supports these operations and the platform has permission to use them.
+
+#### **5. Availability and Notifications**
+
+- Display external space availability based on information returned by the DeskOS API.
+
+- Display the time and availability information supplied by the API, where available.
+
+- Send booking reminders for bookings whose details and status are available to the platform.
+
+- Notify users about changes in external space availability only when the required updates or availability information are provided to the platform.
+
+- Avoid presenting external availability as confirmed when the API has not supplied the necessary information.
+
+#### **6. Administration**
+
+- View and manage user accounts.
+
+- Activate or deactivate accounts and manage platform access permissions.
+
+- Monitor platform activity and review reported problems.
+
+- View and manage booking records that the platform is authorized to control.
+
+- Generate reports using available platform usage and booking data.
+
+- Manage platform settings and notification rules, if implemented.
+
+- Monitor API integration errors and the status of requests made by the platform.
+
+- Manage only platform-owned data and authorized records, not the source listings or availability of external providers.
+
+4.  **Out-of-Scope Features**
+
+- Online payment processing or integration with payment gateways.
+
+- Real-time IoT integration, such as detecting whether a room is physically occupied using sensors.
+
+- Smart access control, such as unlocking doors using QR codes, NFC, or biometric authentication.
+
+- Food and beverage ordering.
+
+- Advanced AI-based recommendations for selecting the best workspace.
+
+- Integration with external calendar applications such as Google Calendar or Microsoft Outlook.
+
+- Video conferencing within the booking system.
+
+- Native mobile applications for Android and iOS; the initial version will focus on a web-based system.
+
+- Managing or controlling the physical facilities of third-party providers.
+
+- Direct ownership or operation of third-party workspace locations.
+
+- Direct creation, editing, deletion, or maintenance of external providers' source space listings in DeskOS.
+
+- Direct management or modification of external providers' source availability and inventory.
+
+- Direct management of external providers' physical rooms, facilities, or operations.
+
+- Developing a separate provider-management system that duplicates the provider or inventory management functions already supplied by DeskOS.
+
+- Implementing unsupported DeskOS API operations or assuming access to data that the API does not provide.
+
+5.  **Major Deliverables**
+
+- Requirements Specification describing system requirements and user needs.
+
+- System Design including use case diagrams, class diagrams, database design, and system architecture.
+
+- User Interface Prototype showing the main screens and user interactions.
+
+- DeskOS API integration component for retrieving, validating, and processing supported external space information and availability.
+
+- Platform booking and booking record management functionality for operations the system is authorized to handle.
+
+- Platform administration functionality for user access, activity monitoring, authorized booking records, issue handling, and usage reports.
+
+- Testing documentation covering API responses, error handling, data validation, and the supported platform booking workflows.
+
+- A web-based space search and booking platform.
+
+- Search and filtering functionality.
+
+- DeskOS API integration for supported external space information and availability.
+
+- Display of participating provider identity and relevant information when available.
+
+- Platform booking records and authorized booking functions.
+
+- User notifications and platform administration features.
+
+- API error handling, testing, and project documentation.
