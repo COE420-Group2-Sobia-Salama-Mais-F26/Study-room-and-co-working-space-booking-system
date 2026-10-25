@@ -1,42 +1,25 @@
 # Gantt Chart
 
-The activities below are the same as in the [WBS](../WBS.md). Days are counted from the project start (day 0), and each task starts at its Earliest Start.
+The activities below are the same as in the [WBS](../WBS.md). The project starts on **Monday 5 October 2026** and finishes on **Thursday 12 November 2026** (39 days). Each task starts at its Earliest Start, and days are counted as calendar days.
 
 ![Gantt Chart](Gantt_Chart.png)
 
+Red bars are critical tasks (no slack). Blue bars (T4 and T7) are non-critical and have 1 day of slack. Arrow colour shows the predecessor task.
+
 ## Schedule
 
-| ID | Task | Duration | Start (end of day) | Finish (end of day) | Predecessors |
-|---|---|---|---|---|---|
-| T1 | Requirements Refinement | 3 | 0 | 3 | — |
-| T2 | Database Design | 4 | 3 | 7 | T1 |
-| T3 | User Interface Design | 4 | 3 | 7 | T1 |
-| T4 | User Management Implementation | 5 | 7 | 12 | T2, T3 |
-| T5 | Space Search and Selection Implementation | 6 | 7 | 13 | T2, T3 |
-| T6 | Booking Management Implementation | 7 | 13 | 20 | T4, T5 |
-| T7 | Availability and Notifications Implementation | 5 | 20 | 25 | T6 |
-| T8 | Administration Implementation | 6 | 20 | 26 | T4, T5, T6 |
-| T9 | System Integration | 4 | 26 | 30 | T7, T8 |
-| T10 | System Testing and Bug Fixing | 6 | 30 | 36 | T9 |
-| T11 | Deployment Preparation and Final Documentation | 3 | 36 | 39 | T10 |
+| ID | Task | Duration (days) | Start | Finish | Predecessors | Slack |
+|---|---|---|---|---|---|---|
+| T1 | Requirements Refinement | 3 | Mon 5 Oct | Wed 7 Oct | — | 0 |
+| T2 | Database Design | 4 | Thu 8 Oct | Sun 11 Oct | T1 | 0 |
+| T3 | User Interface Design | 4 | Thu 8 Oct | Sun 11 Oct | T1 | 0 |
+| T4 | User Management Implementation | 5 | Mon 12 Oct | Fri 16 Oct | T2, T3 | 1 |
+| T5 | Space Search and Selection Implementation | 6 | Mon 12 Oct | Sat 17 Oct | T2, T3 | 0 |
+| T6 | Booking Management Implementation | 7 | Sun 18 Oct | Sat 24 Oct | T4, T5 | 0 |
+| T7 | Availability and Notification Implementation | 5 | Sun 25 Oct | Thu 29 Oct | T6 | 1 |
+| T8 | Administration Implementation | 6 | Sun 25 Oct | Fri 30 Oct | T4, T5, T6 | 0 |
+| T9 | System Integration | 4 | Sat 31 Oct | Tue 3 Nov | T7, T8 | 0 |
+| T10 | System Testing and Bug Fixing | 6 | Wed 4 Nov | Mon 9 Nov | T9 | 0 |
+| T11 | Deployment Preparation and Final Documentation | 3 | Tue 10 Nov | Thu 12 Nov | T10 | 0 |
 
 **Overall project duration: 39 days.**
-
-## Timeline view
-
-```
-      0    0    1    1    2    2    3    3    
-      0····5····0····5····0····5····0····5····
-T1    ███
-T2       ████
-T3       ████
-T4           ░░░░░
-T5           ██████
-T6                 ███████
-T7                        ░░░░░
-T8                        ██████
-T9                              ████
-T10                                 ██████
-T11                                       ███
-```
-█ critical task   ░ non-critical task (1 day of slack)

@@ -25,3 +25,7 @@ T4 (User Management Implementation) and T7 (Availability and Notifications Imple
 
 - T4 finishes on day 12, but T6 can't start until T5 finishes on day 13.
 - T7 finishes on day 25, but T9 can't start until T8 finishes on day 26.
+
+## Tool-Based Verification
+
+The [Gantt Chart](Gantt_Chart/README.md) produced with a scheduling tool confirms the result: the project runs from Mon 5 Oct to Thu 12 Nov 2026 (39 days), every critical task is shown with no slack, and only T4 and T7 show 1 day of slack.
