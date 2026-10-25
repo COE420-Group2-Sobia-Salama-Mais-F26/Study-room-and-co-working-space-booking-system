@@ -1,31 +1,13 @@
 # Scenarios
 
-## S-01 – Search and Book a Study Room
-**Actor/Stakeholder:** User
+Scenarios describe realistic situations in which the platform is used. External spaces and availability come from participating third-party providers through the **DeskOS API**; the platform only creates, changes, or cancels external bookings when the API supports and authorizes the operation.
 
-A user needs a quiet room for group study. The user searches for study rooms based on location, date, time, duration, and capacity. The user filters the available spaces based on facilities such as Wi-Fi and whiteboards. After viewing the space details and availability, the student selects a suitable room and makes a booking.
-
-## S-02 – Cancel an Existing Booking
-**Actor/Stakeholder:** User
-
-A user has an existing booking for a study room but no longer needs it. The user views their upcoming bookings, selects the reservation, and cancels it. The system updates the availability of the space after the booking is cancelled.
-
-## S-03 – Modify an Existing Booking
-**Actor/Stakeholder:** User
-
-A user has already booked a study room but needs to change their study session. They log into the system and open their upcoming bookings. After choosing the booking they want to adjust, they select a new date, time, or room. The system checks whether the new option is available and updates the booking if it is. The user then gets a confirmation message. If the new time isn't available, the system shows other possible choices.
-
-## S-04 – Manage Workspace Details
-**Actor/Stakeholder:** Platform Administrator
-
-A platform administrator wants to add a new study room or update an existing one. They open the admin dashboard and enter details such as the room name, capacity, facilities, and available times. The administrator saves the changes, and the updated room information becomes available in the system. Users can then see the correct details when searching for a space.
-
-## S-05 – Receive a Booking Reminder
-**Actor/Stakeholder:** User
-
-A user has an upcoming booking for a study room. Before the scheduled time, the system sends the student a reminder with the booking details, including the room, date, start time, and duration. The user can open their booking to check the details and make sure everything is correct.
-
-## S-06 – Retrieve External Space Information
-**Actors:** User; Third-Party Space Provider (via External API)
-
-A user searches for spaces by location, time, capacity, and facilities. The platform requests matching space information and availability from the external provider API, validates the response, and displays suitable spaces. If the API fails or returns invalid information, the platform shows an appropriate message rather than claiming confirmed availability.
+| Scenario ID | Scenario Title | Actor/Stakeholder | Scenario Description |
+|---|---|---|---|
+| S-01 | Search and Book a Study Room | Student / Customer | A customer needs a meeting room in Dubai for four people on October 20, 2026, from 10:00 AM to 11:00 AM. The customer searches using location, date, time, and capacity filters. The platform retrieves participating operators, campuses, and inventory through the DeskOS API, then applies supported search filters within the platform. The customer filters the results by facilities such as Wi-Fi and a whiteboard, reviews the details, and proceeds with a booking only through a booking process supported by the platform and authorized integration. |
+| S-02 | Cancel an Existing Booking | Student / Customer | A customer has booked a meeting room in Dubai on October 20, 2026, from 10:00 AM to 11:00 AM, but no longer needs it. The customer opens their upcoming bookings and selects the reservation. The system checks the cancellation policy through the DeskOS API, cancels the booking if cancellation is permitted, updates the booking status through callbacks, and refreshes the space availability information. |
+| S-03 | Modify an Existing Booking | Student / Customer / User | A customer has booked a meeting room in Dubai for October 20, 2026, from 10:00 AM to 11:00 AM, for four people. The customer wants to change the booking to 11:00 AM–12:00 PM. The system checks the availability of the requested time and applies the modification if the space is available and the booking rules permit the change. It applies the modification only when the booking is managed by the platform or the DeskOS API supports and authorizes the required modification. Otherwise, the platform informs the customer that the change cannot be completed through the system. The system then confirms the updated booking or displays alternative options. |
+| S-04 | Manage Workspace Details | Platform Administrator | The website administrator manages the booking platform rather than the physical spaces owned by external providers. The administrator reviews user accounts, manages access permissions, monitors platform activity, reviews reported problems, and views authorized booking records and usage reports. The administrator does not directly add, edit, delete, or change the source availability of external spaces supplied through the DeskOS API. |
+| S-05 | Receive a Booking Reminder | Student | A student has an active booking for Room D-204 in a meeting space in Dubai on 20 October 2026 from 10:00 AM to 11:00 AM. The system sends a reminder 24 hours before the booking starts, including the room, date, start time, and duration. If the booking has already been cancelled, the system does not send the reminder. The student can open the booking to review its details. For external bookings, reminder delivery depends on the platform receiving sufficient booking information and status from the supported integration. |
+| S-06 | Receive Space Information from the DeskOS API | DeskOS / External API | The DeskOS API has information about bookable locations and spaces. When the platform needs matching spaces based on a user's search criteria, the system sends the relevant filters through the external API. The API returns matching space information and availability from the DeskOS system. The system processes the returned information and displays suitable spaces to the user. |
+| S-07 | Request Space-Availability Notification | Student | A student wants Room D-204 for 4 people on 20 October 2026 from 10:00 AM to 11:00 AM, but the room is unavailable. The student selects the option to be notified if that exact room and time slot become available. The platform records the request and sends a notification only if it can obtain a relevant availability update through the DeskOS API. If the required updates are not available, the platform informs the user that it cannot guarantee an availability notification. |
