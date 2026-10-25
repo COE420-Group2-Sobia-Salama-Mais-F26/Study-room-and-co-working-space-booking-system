@@ -1,4 +1,8 @@
-# Exercise 2: Define the Project Scope done by Mais Abudaqqa g00099729
+## Exercise 2: Define the Project Scope done by *Mais Abudaqqa g00099729*
+
+Define the initial scope of your software project.
+
+Your project scope should include:
 
 1.  **Project Objective**
 
@@ -14,6 +18,10 @@ The website administrator will manage platform users, access permissions, platfo
 
 2.  **Target Users**
 
+Identify the main users or beneficiaries of the proposed system.
+
+**ANS:**
+
 - **Students:** Users who need quiet spaces for individual or group study.
 
 - **Freelancers and remote workers:** Users who need suitable workspaces, meeting spaces, or desks.
@@ -25,6 +33,10 @@ The website administrator will manage platform users, access permissions, platfo
 - **Third-party space providers:** External parties responsible for the space information and provider-side operations made available through the DeskOS platform and API. Their exact responsibilities and supported operations depend on the integration arrangement.
 
 3.  **In-Scope Features**
+
+List the major features and functionalities that will be included in the project.
+
+**ANS:**
 
 #### **1. User Management**
 
@@ -104,6 +116,10 @@ The website administrator will manage platform users, access permissions, platfo
 
 4.  **Out-of-Scope Features**
 
+> Identify features or functionalities that will **not** be included in the current version of the project.
+>
+> **ANS:**
+
 - Online payment processing or integration with payment gateways.
 
 - Real-time IoT integration, such as detecting whether a room is physically occupied using sensors.
@@ -135,6 +151,10 @@ The website administrator will manage platform users, access permissions, platfo
 - Implementing unsupported DeskOS API operations or assuming access to data that the API does not provide.
 
 5.  **Major Deliverables**
+
+> Identify the main expected deliverables of the project, such as software components, documentation, prototypes, or other project artifacts.
+>
+> ANS:
 
 - Requirements Specification describing system requirements and user needs.
 

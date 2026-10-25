@@ -1,4 +1,16 @@
-# Exercise 1: Selection of a Software Process Model done by sobia adnan g00100257
+**Exercise 1: Selection of a Software Process Model done by *sobia adnan g00100257***
+
+Based on the characteristics of your proposed project, select the **most appropriate software process model**.
+
+Your team should:
+
+1.  Identify the selected software process model.
+
+2.  Justify why this model is appropriate for your project.
+
+3.  Identify the major overheads/drawbacks associated with the selected model, and explain how your team will manage or reduce these overheads/drawbacks.
+
+ANS:
 
 **1. Selected Software Process Model**
 
