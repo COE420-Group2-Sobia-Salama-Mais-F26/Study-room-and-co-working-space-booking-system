@@ -1,4 +1,4 @@
-# Work Breakdown Structure (WBS)
+# Exercise 4: Work Breakdown Structure (WBS)
 
 | ID | Task Name | Description | Predecessor(s) | Duration (Days) |
 |---|---|---|---|---|
@@ -13,5 +13,3 @@
 | T9 | System Integration | Integrate user management, space search, booking management, availability and notification management, and administration. Verify communication with the third-party space provider and ensure the components work together correctly. | T7, T8 | 4 |
 | T10 | System Testing and Bug Fixing | Test registration, authentication, space search, filtering, external space information, booking operations, modifications, cancellations, availability updates, notifications, administration, data consistency, and system integration. Fix identified defects. | T9 | 6 |
 | T11 | Deployment Preparation and Final Documentation | Prepare the system for deployment, finalize system documentation, verify the final functionality, and organize the project deliverables and repository. | T10 | 3 |
-
-Implementation tasks T4–T8 match the Level-0 DFD processes P1–P5.

@@ -12,7 +12,7 @@ Editable diagram (Creately): https://app.creately.com/d/lNShtZgzeFY/edit
 |---|---|
 | User | User (student / booker) |
 | Administrator | Administrator |
-| Third-Party Space Provider / External API | DeskOS / External API |
+| Third-Party Space Provider / External API | Not in the Lab 3 Use Case Diagram |
 
 ## Data Flows
 
