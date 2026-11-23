@@ -1,11 +1,50 @@
-**short project description:**
+# 1.1. Project Description and Objectives
 
-Existing UAE workspace booking systems are mainly provided by educational institutions or commercial co-working spaces. However, these systems are often limited to specific institutions or primarily focused on professional users, which may not address the needs of individuals looking for flexible spaces for studying, working, meetings, or collaboration.
+Existing workspace booking systems in the UAE are mainly provided by
+educational institutions or commercial co-working spaces. These systems
+are often limited to specific institutions or focus mainly on
+professional users, so individuals who need a flexible place to study,
+work, meet, or collaborate do not have one place to search for and
+reserve a suitable space.
 
-To address this gap, the Study Room and Co-Working Space Booking System proposes a unified web-based platform accessible to students, professionals, freelancers, remote workers, and other individuals looking for a suitable place to study, work, meet, or collaborate.
+The Study Room and Co-Working Space Booking System addresses this gap
+through a unified web-based platform for students, professionals,
+freelancers, remote workers, and other individuals. Users can search for
+meeting rooms and desks (day passes) by location, date, time, duration,
+capacity, and available facilities, and the system filters the results
+according to their needs.
 
-The system will allow users to search for and reserve different types of spaces, such as study rooms, meeting rooms, private rooms, desks, and co-working spaces. Users can search based on location, date, time, duration, capacity, and available facilities.
+The platform works with third-party space providers through the DeskOS
+API \[1\]. Coworking operators that join DeskOS choose which of their
+campuses to share, and the platform reads their cities, campuses,
+spaces, and availability through this single API. It also creates and
+cancels bookings through it. The system displays the operator's name,
+operator ID, campus, and city alongside each space. DeskOS does not
+allow a booking to be changed, so a change is made by cancelling the
+booking and booking again.
 
-The platform will also interact with third-party space providers who have agreed to work with this system or website hrough external APIs such as DeskOS t. These third-party providers can supply information about available locations and spaces to the platform through external API. The platform will process this information and present suitable options to users. The system will also display the provider's identity and relevant details alongside the space information.
+**The main objectives of the project are to:**
 
-The administration will be responsible for managing the platform's users, bookings, space information, availability, and notifications. The administration and third-party providers are separate: the administration manages the platform, while third-party providers supply external space and availability information. The administrator will not directly manage external providers' physical spaces or change their source availability through the platform.
+1.  Provide one web-based platform where students, professionals,
+    freelancers, remote workers, and other individuals can find and
+    reserve suitable spaces for studying, working, meetings, or
+    collaboration.
+
+2.  Allow users to search for spaces based on location, date, time,
+    duration, capacity, and available facilities.
+
+3.  Allow users to make, view, change, and cancel bookings, and to
+    receive booking reminders and availability notifications.
+
+4.  Get spaces and their availability from DeskOS operators through the
+    DeskOS API, so users can search external spaces in one place.
+
+5.  Allow the website administrator to manage platform users, access
+    permissions, platform activity, authorized booking records,
+    reported issues, and usage reports.
+
+The platform manages its own user accounts, access permissions, booking
+records, and notifications. It does not create or edit the operators'
+space listings or availability, and the administrator does not manage
+the physical facilities, source listings, or source availability of
+external providers.
