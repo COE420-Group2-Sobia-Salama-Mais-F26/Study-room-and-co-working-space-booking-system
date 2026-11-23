@@ -1,4 +1,13 @@
-# 4.3.2 Descriptions of the Three Major Use Cases
+# Exercise 1: Select Three Major Use Cases
+
+| Use Case ID | Use Case Name | Primary Actor | Purpose | Reason for Selection |
+|---|---|---|---|---|
+| UC01 | Search for Spaces | User | Find meeting rooms or day-pass desks that match the user's criteria. | This is a core system function and demonstrates interactions between the User, SpaceSearch, Space, Location, Facility, and the external DeskOS API. It is suitable for modeling how search criteria are submitted, external results are processed, and matching spaces are displayed. |
+| UC02 | Make Booking | User | Reserve an available meeting room or day-pass desk for a selected date and time. | Booking is a major system function that involves interactions among the User, Space, Availability, Booking, and BookingService classes. The sequence diagram can demonstrate request validation, availability checking, communication with the external system when supported, and the handling of the booking result. |
+| UC03 | Manage Platform Booking Records | Administrator | Review the booking records the platform is authorized to control and cancel a booking when needed. | This use case demonstrates administrative functionality and interactions among the PlatformAdmin, Booking, BookingService, and relevant external integration components. It also shows the distinction between managing platform booking records and directly controlling external providers' bookings or source availability. |
+
+
+## Use Case Descriptions
 
 The three major use cases below are the same ones modeled in the
 sequence and activity diagrams: Search for Spaces (UC-01), Make Booking
@@ -46,3 +55,18 @@ sequence and activity diagrams: Search for Spaces (UC-01), Make Booking
 | Related Requirements | FR-14, FR-19, NFR-14 |
 
 **Table 4.5** Use case description – UC-13 Manage Reservations
+
+
+## Dynamic Model
+
+The dynamic models cover the three major use cases: UC-01 Search for Spaces, UC-04 Make Booking, and UC-13 Manage Reservations (Manage Platform Booking Records). Each use case has a UML sequence diagram, which shows the messages exchanged between actors and objects, and a UML activity diagram, which shows the workflow and decision points.
+
+- Figure 7.1 shows how the search criteria are validated and how campuses, spaces, and availability are retrieved from DeskOS before the matching spaces are displayed. ([Sequence_Diagrams/UC01_Search_for_Spaces.png](Sequence_Diagrams/UC01_Search_for_Spaces.png))
+- Figure 7.2 shows how availability is checked, how the booking is submitted to DeskOS, and how the booking status is updated. ([Sequence_Diagrams/UC02_Make_Booking.png](Sequence_Diagrams/UC02_Make_Booking.png))
+- Figure 7.3 shows how the administrator retrieves booking records, views booking details, and cancels a booking through DeskOS. ([Sequence_Diagrams/UC03_Manage_Platform_Booking_Records.png](Sequence_Diagrams/UC03_Manage_Platform_Booking_Records.png))
+
+The activity diagrams use swimlanes for the User, PlatformAdmin, SpaceSearchService, BookingService, and DeskOSAPI, and show the decision points, guard conditions, and parallel steps of each use case.
+
+- Figure 7.4 Activity diagram for UC-01 Search for Spaces: [AD_UC01_Search_for_Spaces.pdf](Activity_Diagrams/AD_UC01_Search_for_Spaces.pdf)
+- Figure 7.5 Activity diagram for UC-04 Make Booking: [AD_UC02_Make_Booking.pdf](Activity_Diagrams/AD_UC02_Make_Booking.pdf)
+- Figure 7.6 Activity diagram for UC-13 Manage Reservations: [AD_UC03_Manage_Platform_Booking_Records.pdf](Activity_Diagrams/AD_UC03_Manage_Platform_Booking_Records.pdf)

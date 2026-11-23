@@ -1,57 +1,35 @@
-# 2.4. Feasibility Study
+**Exercise 5: Initial Feasibility Study Salama alsuwaidi 99875**
 
-**Technical feasibility:** The system can be developed using the
-technologies, software, and resources available for a web-based project.
-The main functions are user registration and login, searching and
-filtering spaces, viewing space details and availability, making and
-managing bookings, notifications, and an admin dashboard, supported by a
-database for users, spaces, availability, and reservations. No special
-hardware is required because IoT sensors and smart access are outside
-the scope, and the system is web-based rather than separate Android and
-iOS applications. The DeskOS API gives the platform a login token using
-a client ID and secret, with this token, the platform can get spaces and
-availability and make and cancel bookings. DeskOS does not allow
-changing a booking, so the platform cancels and books again instead. The
-team will test everything on the DeskOS test (staging) server.
+Conduct an initial feasibility study for your proposed project.
 
-**Economic feasibility:** The expected costs are reasonable because the
-current version is a web-based booking system, and features that need
-additional resources, such as online payments, IoT sensors, smart
-access, and native mobile applications, are not included. The main
-resources are development software and tools and the team's time and
-effort. The DeskOS documentation does not list a subscription fee, it
-has request limits, and higher limits can be requested. Users do not pay
-through DeskOS: DeskOS bills the operators and records a commission for
-each booking. The team will contact DeskOS sales to get access.
+Your study should briefly evaluate the following:
 
-**Operational feasibility:** The system solves a real problem because
-existing workspace booking systems in the UAE are usually limited to
-certain institutions or mainly serve professional users. The platform
-gives students, freelancers, remote workers, and other users one place
-to find and book a suitable space by location, date, time, capacity, and
-facilities, and to make, change, or cancel bookings. Platform
-administrators manage users and bookings, while operators manage their
-spaces in DeskOS. The DeskOS integration is useful only if DeskOS
-operators share spaces in the cities the users need, so the team will
-check the list of cities the API returns before relying on it.
+1.  **A. Technical Feasibility**
 
-**Schedule feasibility:** The project can be completed within the course
-duration because the work is divided into increments: User Management,
-Space Search and Selection, DeskOS Integration, Booking Management,
-Availability and Notifications, and Administration. Since the
-Incremental Model is used, each part can be finished and tested before
-moving to the next. The project schedule in Chapter 3 gives a total
-duration of 39 days (5 October to 12 November 2026). The DeskOS
-integration may need time to review documentation, obtain access, test
-endpoints, validate responses, and handle errors, so the team will
-investigate these early and prioritize the core platform features.
+> Can the system be developed using the technologies, tools, hardware, software, and technical skills available to the team?
 
-**Overall feasibility:** The Study Room and Co-Working Space Booking
-System is feasible within the course duration because its main features
-(user management, space search, DeskOS API integration, platform
-administration, and booking) can be developed incrementally. The DeskOS
-integration depends on getting access from DeskOS and on operators
-sharing spaces in the users' cities. By finishing core features first,
-testing each increment, and testing the integration on the DeskOS
-staging server, the team aims to deliver a working system within the
-available time.
+ANS: The system can be developed using the technologies, software, and resources available for a web-based project. The main functions are user registration and login, searching and filtering spaces, viewing space details and availability, making and managing bookings, notifications, and an admin dashboard, supported by a database for users, spaces, availability, and reservations. No special hardware is required because IoT sensors and smart access are outside the scope, and the system is web-based rather than separate Android and iOS applications. The DeskOS API gives the platform a login token using a client ID and secret, with this token, the platform can get spaces and availability and make and cancel bookings. DeskOS does not allow changing a booking, so the platform cancels and books again instead. The team will test everything on the DeskOS test (staging) server.
+
+2.  **Economic Feasibility**
+
+> Are the expected costs and resources reasonable for the proposed project? Identify any expected costs, required resources, or limitations.
+
+ANS: The expected costs are reasonable because the current version is a web-based booking system, and features that need additional resources, such as online payments, IoT sensors, smart access, and native mobile applications, are not included. The main resources are development software and tools and the team's time and effort. The DeskOS documentation does not list a subscription fee, it has request limits, and higher limits can be requested. Users do not pay through DeskOS: DeskOS bills the operators and records a commission for each booking. The team will contact DeskOS sales to get access. A possible limitation is that adding some of the out-of-scope features in the future may require additional resources and costs.
+
+3.  **Operational Feasibility**
+
+> Is the proposed system expected to solve a real problem or meet a genuine user need? Are the intended users likely to use and accept the system?
+
+ANS: The system solves a real problem because existing workspace booking systems in the UAE are usually limited to certain institutions or mainly serve professional users. The platform gives students, freelancers, remote workers, and other users one place to find and book a suitable space by location, date, time, capacity, and facilities, and to make, change, or cancel bookings. Platform administrators manage users and bookings, while operators manage their spaces in DeskOS. The DeskOS integration is useful only if DeskOS operators share spaces in the cities the users need, so the team will check the list of cities the API returns before relying on it. We think users would use the system because it makes finding and booking a suitable space easier and more organized.
+
+4.  **Schedule Feasibility**
+
+> Can the major project features and deliverables realistically be completed within the available course duration?
+
+ANS: The project can be completed within the course duration because the work is divided into increments: User Management, Space Search and Selection, DeskOS Integration, Booking Management, Availability and Notifications, and Administration. Since the Incremental Model is used, each part can be finished and tested before moving to the next. The project schedule in Chapter 3 gives a total duration of 39 days (5 October to 12 November 2026). The DeskOS integration may need time to review documentation, obtain access, test endpoints, validate responses, and handle errors, so the team will investigate these early and prioritize the core platform features. The main limitation could be if some tasks take longer than planned, so we will divide the tasks between the team members and keep track of the deadlines.
+
+5.  **Overall Feasibility**
+
+> Based on the above analysis, provide a brief conclusion stating whether the project appears feasible and identify any major constraints that may affect its successful completion.
+
+ANS: The Study Room and Co-Working Space Booking System is feasible within the course duration because its main features (user management, space search, DeskOS API integration, platform administration, and booking) can be developed incrementally. The DeskOS integration depends on getting access from DeskOS and on operators sharing spaces in the users' cities. By finishing core features first, testing each increment, and testing the integration on the DeskOS staging server, the team aims to deliver a working system within the available time.

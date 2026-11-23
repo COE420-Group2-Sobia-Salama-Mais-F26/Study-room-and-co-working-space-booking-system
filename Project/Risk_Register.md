@@ -1,59 +1,41 @@
-# 2.3. Risk Analysis
+## Exercise 3: Project Risks and Risk Management *Mais Abudaqqa g00099729*
 
-The team identified five main risks that could affect the project. Table
-2.2 describes each risk and its possible cause.
+Identify potential risks that may affect your software project.
 
-| **ID** | **Risk**                                                                                                   | **Possible Cause**                                                                                                                    |
-|--------|------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| R1     | Requirements may change during the project.                                                                | Features may need to be added or modified as the platform is developed.                                                               |
-| R2     | The project may not be completed on time.                                                                  | Some tasks may take longer than expected or team members may fall behind.                                                             |
-| R3     | Communication problems may occur between team members.                                                     | Team members may misunderstand tasks or fail to communicate progress.                                                                 |
-| R4     | User or booking data could be exposed or lost.                                                             | Weak passwords, database security problems, or incorrect handling of user information.                                                |
-| R5     | The DeskOS API integration may fail or return errors, so the platform cannot show spaces or make bookings. | DeskOS is down, the login token (lasts for 1 hour only) expires, the request limit is reached, or the operator has not joined DeskOS. |
+For each identified risk, provide the following information:
 
-**Table 2.2** Identified project risks
+| Risk ID | Risk Description                                                                                                                                                                                                                                                                                | Possible Cause                                                                                                               | Probability | Impact | Mitigation/Response Strategy                                                                                                                                                                                                                                                                                                         |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| R1      | Requirements may change during the project.                                                                                                                                                                                                                                                     | Features may need to be added or modified as the platform is developed.                                                      | Medium      | Medium | Discuss requirements early and agree on the main features before development.                                                                                                                                                                                                                                                        |
+| R2      | The project may not be completed on time.                                                                                                                                                                                                                                                       | Some tasks may take longer than expected or team members may fall behind.                                                    | Medium      | High   | Divide the project into smaller tasks, set deadlines, and regularly monitor progress.                                                                                                                                                                                                                                                |
+| R3      | Communication problems may occur between team members.                                                                                                                                                                                                                                          | Team members may misunderstand tasks or fail to communicate progress.                                                        | Medium      | Medium | Hold regular meetings and use a shared platform to track tasks and updates.                                                                                                                                                                                                                                                          |
+| R4      | User or booking data could be exposed or lost.                                                                                                                                                                                                                                                  | Weak passwords, database security problems, or incorrect handling of user information.                                       | Low         | High   | Use secure authentication, protect the database, validate user input, and maintain backups.                                                                                                                                                                                                                                          |
+| R5      | The DeskOS API integration may fail or return errors, so the platform cannot show spaces or make bookings. | DeskOS is down, the login token (lasts for 1 hour only) expires, the request limit is reached, or the operator has not joined DeskOS. | Medium      | High   | Test early on the DeskOS staging server. Save space data, get a new token when it expires, wait and retry when the request limit is reached, and check the booking status if a callback is missed. |
 
-### 2.3.1 Probability
+R2 and R5 combine a medium probability with a high impact, so they are the highest-priority risks. R4 is unlikely but would have a high impact, so it is still addressed from the start.
 
-Each risk was rated by how likely it is to occur during the project.
+Your team should identify **at least five potential risks** related to the project.
 
-| **ID** | **Risk**                                               | **Probability** |
-|--------|--------------------------------------------------------|-----------------|
-| R1     | Requirements may change during the project.            | Medium          |
-| R2     | The project may not be completed on time.              | Medium          |
-| R3     | Communication problems may occur between team members. | Medium          |
-| R4     | User or booking data could be exposed or lost.         | Low             |
-| R5     | The DeskOS API integration may fail or return errors.  | Medium          |
+Possible areas to consider include:
 
-**Table 2.3** Risk probability
+- Changing or unclear requirements
 
-### 2.3.2 Impact
+- Technical difficulties
 
-Each risk was also rated by how seriously it would affect the project if
-it occurred.
+- Lack of required skills
 
-| **ID** | **Risk**                                               | **Impact** |
-|--------|--------------------------------------------------------|------------|
-| R1     | Requirements may change during the project.            | Medium     |
-| R2     | The project may not be completed on time.              | High       |
-| R3     | Communication problems may occur between team members. | Medium     |
-| R4     | User or booking data could be exposed or lost.         | High       |
-| R5     | The DeskOS API integration may fail or return errors.  | High       |
+- Team member availability
 
-**Table 2.4** Risk impact
+- Schedule delays
 
-R2 and R5 combine a medium probability with a high impact, so they are
-the highest-priority risks. R4 is unlikely but would have a high impact,
-so it is still addressed from the start.
+- Integration problems
 
-### 2.3.3 Mitigation
+- Resource limitations
 
-| **ID** | **Mitigation / Response Strategy**                                                                                                                                                                 |
-|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| R1     | Discuss requirements early and agree on the main features before development.                                                                                                                      |
-| R2     | Divide the project into smaller tasks, set deadlines, and regularly monitor progress.                                                                                                              |
-| R3     | Hold regular meetings and use a shared platform to track tasks and updates.                                                                                                                        |
-| R4     | Use secure authentication, protect the database, validate user input, and maintain backups.                                                                                                        |
-| R5     | Test early on the DeskOS staging server. Save space data, get a new token when it expires, wait and retry when the request limit is reached, and check the booking status if a callback is missed. |
+- Communication problems
 
-**Table 2.5** Risk mitigation and response strategies
+- Security or privacy concerns
+
+- Stakeholder or customer availability
+
+For each risk, assess its potential probability and impact, and describe how the team will attempt to mitigate or respond to it.

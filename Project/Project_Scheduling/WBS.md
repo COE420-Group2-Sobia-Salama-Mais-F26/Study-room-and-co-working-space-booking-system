@@ -1,7 +1,6 @@
-# 3.1. Work Breakdown Structure (WBS)
+# Exercise 4: Work Breakdown Structure (WBS)
 
-The WBS divides the project into 11 activities based on the actual work
-needed to build the system. Durations are in days.
+The WBS divides the project into 11 activities based on the actual work needed to build the system. Durations are in days.
 
 | **ID** | **Task Name**                                  | **Description**                                                                                                                                                                                                                                                                             | **Predecessors** | **Duration (Days)** |
 |--------|------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|---------------------|

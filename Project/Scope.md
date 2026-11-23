@@ -1,8 +1,38 @@
-# Project Scope
+## Exercise 2: Define the Project Scope done by *Mais Abudaqqa g00099729*
 
-## 1.2. Target Users
+Define the initial scope of your software project.
 
-The main users and beneficiaries of the system are:
+Your project scope should include:
+
+1.  **Project Objective**
+
+**The main objectives of the project are to:**
+
+1.  Provide one web-based platform where students, professionals,
+    freelancers, remote workers, and other individuals can find and
+    reserve suitable spaces for studying, working, meetings, or
+    collaboration.
+
+2.  Allow users to search for spaces based on location, date, time,
+    duration, capacity, and available facilities.
+
+3.  Allow users to make, view, change, and cancel bookings, and to
+    receive booking reminders and availability notifications.
+
+4.  Get spaces and their availability from DeskOS operators through the
+    DeskOS API, so users can search external spaces in one place.
+
+5.  Allow the website administrator to manage platform users, access
+    permissions, platform activity, authorized booking records,
+    reported issues, and usage reports.
+
+The platform manages its own user accounts, access permissions, booking records, and notifications. It does not create or edit the operators' space listings or availability, and the administrator does not manage the physical facilities, source listings, or source availability of external providers.
+
+2.  **Target Users**
+
+Identify the main users or beneficiaries of the proposed system.
+
+**ANS:**
 
 - **Students:** users who need quiet spaces for individual or group
   study.
@@ -21,9 +51,11 @@ The main users and beneficiaries of the system are:
   They choose which campuses to share and approve bookings in their
   own DeskOS dashboard. They do not use the platform directly.
 
-## 1.3. In-Scope and Out-Scope Features
+3.  **In-Scope Features**
 
-**In-Scope Features**
+List the major features and functionalities that will be included in the project.
+
+**ANS:**
 
 Table 1.1 lists the major features and functionalities included in the
 project.
@@ -39,7 +71,11 @@ project.
 
 **Table 1.1** In-scope features
 
-**Out-of-Scope Features**
+4.  **Out-of-Scope Features**
+
+> Identify features or functionalities that will **not** be included in the current version of the project.
+>
+> **ANS:**
 
 - Online payment processing or integration with payment gateways.
 
@@ -81,3 +117,37 @@ project.
   commission), which operators set in their DeskOS dashboard.
 
 - Booking virtual offices, which the API only lists.
+
+5.  **Major Deliverables**
+
+> Identify the main expected deliverables of the project, such as software components, documentation, prototypes, or other project artifacts.
+>
+> ANS:
+
+- Requirements Specification describing system requirements and user needs.
+
+- System Design including use case diagrams, class diagrams, database design, and system architecture.
+
+- User Interface Prototype showing the main screens and user interactions.
+
+- DeskOS API integration component for retrieving, validating, and processing supported external space information and availability.
+
+- Platform booking and booking record management functionality for operations the system is authorized to handle.
+
+- Platform administration functionality for user access, activity monitoring, authorized booking records, issue handling, and usage reports.
+
+- Testing documentation covering API responses, error handling, data validation, and the supported platform booking workflows.
+
+- A web-based space search and booking platform.
+
+- Search and filtering functionality.
+
+- DeskOS API integration for supported external space information and availability.
+
+- Display of participating provider identity and relevant information when available.
+
+- Platform booking records and authorized booking functions.
+
+- User notifications and platform administration features.
+
+- API error handling, testing, and project documentation.

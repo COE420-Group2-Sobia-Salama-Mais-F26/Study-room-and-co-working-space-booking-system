@@ -5,7 +5,7 @@
 | Use Cases | Classes |
 |---|---|
 | UC-01, UC-02, UC-03 (search, filter, view details) | User, SearchCriteria, SpaceSearchService, Space, Location, Facility |
-| UC-04, UC-05, UC-06 (make, cancel, modify booking) | Booking, BookingService, Space, Availability |
+| UC-04, UC-05, UC-06 (make, cancel, change booking) | Booking, BookingService, Space, Availability |
 | UC-07, UC-08 (reminder, availability notification) | Notification, AvailabilityNotificationRequest |
 | UC-09, UC-13, UC-14, UC-15 (administration) | PlatformAdmin |
 | UC-10, UC-11, UC-12 (profile, register, view bookings) | User, Booking |

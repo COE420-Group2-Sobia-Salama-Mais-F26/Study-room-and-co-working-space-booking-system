@@ -1,7 +1,16 @@
-# 2.2. Stakeholders
+**Exercise 4: Identify Project Stakeholders *sobia adnan g00100257***
 
-The major stakeholders of the project, their roles, and their
-relationship with the system are summarized in Table 2.1.
+Identify all major stakeholders associated with your software project. For each stakeholder, describe:
+
+1.  Their role in relation to the project.
+
+2.  Their main interests or expectations.
+
+3.  How they may affect the development or success of the system.
+
+4.  How the proposed system may affect them.
+
+Use the following table:
 
 | **Stakeholder**                       | **Role**                                                                                                                           | **Interests and Expectations**                                                                                  | **Influence on the System**                                                                                  | **How the System Affects Them**                                                                                                                                                      |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -12,5 +21,6 @@ relationship with the system are summarized in Table 2.1.
 | DeskOS API provider                   | Provides the external API through which the platform retrieves space information and availability and makes and cancels bookings.  | Appropriate API usage, valid requests, and compliance with its access requirements.                             | API availability, access permissions, supported operations, and returned data affect the integration.        | The platform sends requests to the DeskOS API according to its documented functionality and access conditions.                                                                       |
 | Government and regulatory authorities | Ensure that the system and participating businesses follow relevant UAE rules and regulations.                                     | Compliance with regulations, user safety, and proper handling of information.                                   | Regulations may affect how user information, bookings, and businesses are managed.                           | The system can support more organized and regulated workspace services.                                                                                                              |
 | Software developers / project team    | Analyze requirements, design, implement, test, and maintain the system.                                                            | Clear requirements, a manageable scope, successful implementation, and a reliable system.                       | Their technical decisions affect the system architecture, functionality, usability, and performance.         | They gain a structured system to develop and maintain, and their work determines how well the system meets stakeholder needs.                                                        |
+| DeskOS and Participating Space Providers | Provide external space information and any supported availability or booking operations through the DeskOS platform and API. | Appropriate API usage, valid requests, and compliance with access requirements. | API availability, access permissions, returned data, and supported operations determine what the platform can display or do for external spaces. | The platform sends requests to the DeskOS API and processes the responses according to the documented functionality and permissions. |
 
 **Table 2.1** Main project stakeholders
